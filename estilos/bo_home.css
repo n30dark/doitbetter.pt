@@ -1,0 +1,244 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	font-size: 10px;
+	font-family: Arial, Sans-Serif;
+	text-align:justified;
+	line-height:16px;
+	color: #000000;
+	background: url('../plugins/bo/home/imgs/bg.png');
+	margin: auto;
+	text-align:center;
+}
+
+.bg{
+	background: url('../plugins/bo/home/imgs/bg_home2.png') no-repeat;
+	height:895px;
+	
+}
+
+.header{
+	height:210px;	
+}
+
+.logo_empresa{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.menu_sup{
+	font-size: 11px;
+	margin-top: 130px;	
+}
+
+.menu_sup a:link, a:visited, a:active{
+	color: #000000;
+	text-decoration: underline;
+}
+
+.menu_sup a:hover{
+	color: #000000;
+	text-decoration: none;
+}
+
+.botao_sair_up{
+	background: url('../plugins/bo/home/imgs/botao_sair_up.png') no-repeat;
+	color: #f8f8ff;
+	text-decoration: underline;
+	cursor: pointer;
+	width:100px!important;
+	height:40px!important;
+	text-align:center;
+	line-height:35px;
+	font-size:13px;
+}
+
+.botao_sair_down{
+	background: url('../plugins/bo/home/imgs/botao_sair_down.png') no-repeat;
+	color: #f8f8ff;
+	text-decoration: none;
+	cursor: pointer;
+	width:100px!important;
+	height:40px!important;
+	text-align:center;
+	line-height:35px;
+	font-size:13px;		
+}
+
+.botao_cat_activo{
+	background: url('../plugins/bo/home/imgs/botao_cat_act.png') no-repeat;
+	color: #f8f8ff;
+	cursor: pointer;
+	width:162px!important;
+	height:34px!important;
+	text-align:left;
+	font-weight:bold;
+	line-height:35px;
+	font-size:13px;	
+}
+
+.botao_cat_inactivo{
+	background: url('../plugins/bo/home/imgs/botao_cat_inact.png') no-repeat;
+	color: #f8f8ff;
+	cursor: pointer;
+	width:162px!important;
+	height:34px!important;
+	text-align:left;
+	font-weight:bold;
+	line-height:35px;
+	font-size:13px;	
+}
+
+.botao_activo{
+	background: url('../plugins/bo/home/imgs/botao_act.png') no-repeat;
+	color: #c40b09;
+	cursor: pointer;
+	width:160px!important;
+	height:28px!important;
+	text-align:left;
+	font-weight:bold;
+	line-height:35px;
+	font-size:13px;				
+}
+	
+.botao_inactivo{
+	background: url('../plugins/bo/home/imgs/botao_inact.png') no-repeat;
+	color: #000000;
+	cursor: pointer;
+	width:160px!important;
+	height:28px!important;
+	text-align:left;
+	font-weight:bold;
+	line-height:35px;
+	font-size:13px;		
+}
+
+.sub_menu{
+	font-size:12px;
+	line-height:30px;	
+}
+
+.sub_menu a:link, a:visited, a:active{
+	color: #000000;
+	text-decoration: underline;
+}
+
+.sub_menu a:hover{
+	color: #000000;
+	text-decoration: none;
+}
+
+.small_ico{
+	height:25px!important;
+	cursor: pointer;
+	margin-top:5px;
+	align:center;		
+}
+
+.home_data{
+	font-size:12px;	
+}
+
+.titulo{
+	font-size:24px;
+	margin-top:30px;
+	margin-bottom:20px;
+	text-align: left;
+	padding-left:10px;
+}
+
+.dados_seccao{
+	color: #000000;
+	font-size:12px;
+	height: 510px!important;
+	text-align:justify;
+}
+
+.dados_seccao textarea{
+	height:35px;
+	width: 350px;
+}
+
+.qbotao_activo{
+	background: url('../plugins/bo/home/imgs/qbotao_act.png') no-repeat;
+	height:124px!important;
+	width: 139px!important; 
+	cursor: pointer;
+	text-align:center;
+	margin-top:10px;
+	align:center;	
+}
+
+.qbotao_inactivo{
+	background: url('../plugins/bo/home/imgs/qbotao_inact.png') no-repeat;
+	height:124px!important;
+	width: 139px!important; 
+	cursor: pointer;
+	text-align:center;
+	margin-top:10px;	
+}
+
+.qajuda{
+	color: #000000;
+	font-size:12px;
+	height: 510px!important;
+}
+
+p{
+	margin-top:5px;
+	margin-bottom:5px;	
+}
+
+.field{
+	margin-bottom:5px;	
+}
+
+.label{
+	font-size: 12px;
+	line-height:12px;
+	width: 100px!important;
+	float:left;
+}
+
+.campos{
+	background-color: #ffffff;
+	font: 10px Arial, sans-serif;
+	color: #666666;
+	height:17px;
+	border:1px solid #ccc;
+	width:350px;
+}
+
+input.btn{
+	color: #b46d69;
+	text-decoration:underline;
+	font: 12px Arial, sans-serif;
+	background-color: #636363;
+	border: none;
+}
+
+input.btnhov{
+	color: #a4302a;
+	text-weight: bold;
+	text-decoration:underline;
+	font: 12px Arial, sans-serif;
+	background-color: #636363;
+	border: none;
+	cursor: pointer;
+}
+
+.copyright{
+	font-size:9px;
+	color: #000000;
+	margin-top:10px;		
+}
+
+.copyright a:link, a:visited, a:active{
+	color: #000000;
+	text-decoration: underline;
+}
+
+.copyright a:hover{
+	color: #900606;
+	text-decoration: none;
+}

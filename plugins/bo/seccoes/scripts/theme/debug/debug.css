@@ -1,0 +1,16 @@
+/*MODF: 08:54:00,10.07.07*/
+.dbg_terminal,.dbg_terminal_minimized
+    { position:fixed; top:0; right:0; z-index:8; color:#ccc; font-weight: bold; display:block; font-size: 11px; font-family:monospace; }
+
+.dbg_terminal_minimized
+    { width:24px; height:16px; background-image:url(minimized.png); background-repeat:no-repeat; overflow:hidden;  }
+.dbg_terminal_minimized:active,.dbg_terminal_minimized:hover
+    {  background-image:url(minimized1.png);  }
+
+.dbg_terminal
+    { width:100%; border: 1px dashed #ccc; height: 96px; background-image: url(bg2.png); background-repeat: repeat; overflow: auto; }
+
+.dbg_menu
+    { position: fixed; top: 0; right: 24px; display: block; height: 16px; overflow:hidden; z-index: 9; }
+.dbg_menu img
+    { float:right; }

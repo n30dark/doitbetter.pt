@@ -1,0 +1,56 @@
+O ficheiro "configuracao.php" deverá ser configurado da 
+seguinte forma:
+---------------------------------------------------
+
+[BaseDados]
+//configurações para acesso à base de dados
+	Utilizador = "nomeutilizador" 
+	PalavraPasse = "password"
+	Host = "localhost" //host da base dados
+	BaseDados = "nomedabasedados"
+
+[Caminho]
+	//localização do site
+	ServidorWeb = "caminho/fisico/do/site"
+	SistemaFicheiros = "caminho/fisico/do/site"
+	Url = "http://o.meu.site.com" //sem '/' no fim da url
+
+[Awstats]
+	Conf = "nomedosite"
+	Lingua = "lingua do site"
+	
+[Site]
+	//dados para SEO e outros factores web
+	Titulo = "Título do Site"
+	Charset = "UTF-8"
+	Lingua = "pt" //lingua base do site
+	Desc = "descrição do site"
+	PalavrasChave = "palavras, chave, do, site"
+	Categoria = "categoria do site"
+	Autor = "autor do site"
+	Copyright = "copyright do site"
+	Email = "email de contacto"
+	Twitter = "twitter do site"
+	Hi5 = "hi5 do site"
+	Facebook = "facebook do site"
+	Paypal = "email de paypal do site"
+	
+[SMTP]
+	//Dados de Email (SMTP)
+	Host = "host de email"
+	Utilizador = "utilizador"
+	Passe = "password"
+	
+[xCSS]
+	//dados de configuração do xCSS. NÂO MEXER!!!
+	path_to_css_dir = 'estilos/'
+	xCSS_files = ""
+	use_master_file = true
+	compress_output_to_master = false
+	master_filename = 'master.css'
+	reset_files = ""
+	hook_files = ""
+	construct_name = 'self'
+	minify_output = false
+	debugmode = true
+	disable_xCSS = false

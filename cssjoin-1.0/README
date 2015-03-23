@@ -1,0 +1,77 @@
+[=============================< CSS Joiner 1.0 >=============================]
+[                                                                            ]
+[                      Copyright 2010 CSS Joiner Project                     ]
+[                         http://cssjoin.sunhater.com                        ]
+[                     Pavel Tzonkov <pavelc@users.sf.net>                    ]
+[                                                                            ]
+[============================================================================]
+
+
+I. OVERVIEW
+
+    CSS Joiner is a realtime CSS optimizer, you may use in your web
+    site/application to minimize CSS code returned from your web server.
+    Multiple local or external files can be loaded just like single CSS file -
+    using single <link> tag (one server request). Caching system is available
+    for faster responses - generate and save compressed CSS code once, until
+    change in source CSS files is done.
+
+
+II. FEATURES
+
+    1. Load multile CSS files in single <link> tag.
+    2. Transform url() paths of external CSS files.
+    3. If source CSS files are not provided, CSS Joiner will parse all CSS
+       files in the script's directory.
+    4. Parse only new requests or/and modified CSS files, and return
+       compressed content from cache.
+    5. Browser-side cache.
+    6. HTTP referer protection to avoid external use.
+
+
+III. REQUIREMENTS
+
+    1. Web server (Apache 2 on Linux is tested only)
+    2. PHP 5.x.x. Optional mod_rewrite module for non-parameter URLS
+
+
+IV. INSTALLATION
+
+    For security reasons local files with .css extension only can be parsed.
+    To parse all .css files in a directory in your site (e.g. /css):
+
+    1. Upload index.php from CSS Joiner package to /css directory on your site
+    2. Create /css/cache directory writable for the web server.
+    3. In <head> tag create <link> tag pointed to /css directory URL. Example:
+
+        <link href="/css/" rel="stylesheet" type="text/css" />
+
+    The files will be parsed in alphabetical order. You may rename CSS files
+    for wished parse order. For example you can add numbers at the beginning
+    of the file names.
+
+    For selective files parsing you may add css[] GET parameters pointed to
+    source CSS files you want to parse. It's recommended to URL-encode these
+    parameters. Example:
+
+        http://your.site.com/css/?css[]=common.css&css[]=%2Fapp%2Fstyle.css&css=[]=%2Fnew_css&css[]=http%3A%2F%2Fexternal.site.com%2Fstyle.css
+
+    This example will parse folowing files if they exists and can be read in
+    order they arranged in the URL:
+
+    1. /css/common.css - if not exists CSS Joiner will try to parse /common.css
+    2. /app/style.css - a file outside /css directory
+    3. /new_css - all .css files in /new_css directory in alphabetical order
+       (works only for local files)
+    4. http://external.site.com/style.css - this external file will be parsed
+       if allow_url_fopen PHP ini setting is enabled.
+
+    If you want to use mod_rewrite URL style, you should upload .htaccess from
+    CSS Joiner package to /css. The parsed CSS URL should be transformed to:
+
+        http://your.site.com/css/common.css../app/style.css../new_css..http://external.site.com/style.css
+
+    The files are separated by .. delimiter. You may change the delimiter
+    editing /css/index.php. At the beginning of the file there are several
+    configurable options defined as protected fields with commented
+    descriptions.

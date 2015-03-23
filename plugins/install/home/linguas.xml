@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linguas>
+    <lingua>
+        <codigo>en</codigo>
+        <descricao>en-GB - English (United Kingdom)</descricao>
+    </lingua>
+    <lingua>
+        <codigo>pt</codigo>
+        <descricao>pt-PT - Português (Portugal)</descricao>
+    </lingua>
+</linguas>

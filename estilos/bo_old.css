@@ -1,0 +1,93 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	font-size: 13px;
+	font-family: Arial, Sans-Serif;
+	text-align: left;
+	line-height: 18px;
+	color: #f8f8ff;
+	background: url('../plugins/bo/login/imgs/bg.png');
+}
+
+.bg{
+	background: url('../plugins/bo/login/imgs/login_box.png') no-repeat;
+	height:100%;
+}
+
+.header{
+	margin-top: 205px;
+	height:138px; 
+}
+
+.logo{
+	margin-top:20px;	
+}
+
+.content{
+	margin-top:5px;
+	height: 346px;
+}
+
+.text{
+	margin-top:10px;	
+}
+
+.subtitle{
+	margin-top:15px;	
+}
+
+.company_name{
+	color: #c80000;
+}
+
+a:link, a:visited, a:active{
+	color: #b46d69;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #a4302a;
+	text-decoration: underline;
+}
+
+.field{
+	margin-bottom:5px;	
+}
+
+.label{
+	font-size: 12px;
+	line-height:12px;
+}
+
+.campos{
+	background-color: #f8f8ff;
+	font: 10px Arial, sans-serif;
+	color: #666666;
+	height:17px;
+	width: 100px;
+}
+
+input.btn{
+	color: #b46d69;
+	text-decoration:underline;
+	font: 12px Arial, sans-serif;
+	background-color: #636363;
+	border: none;
+}
+
+input.btnhov{
+	color: #a4302a;
+	text-weight: bold;
+	text-decoration:underline;
+	font: 12px Arial, sans-serif;
+	background-color: #636363;
+	border: none;
+	cursor: pointer;
+}
+
+
+.copyright{
+	font-size:9px;
+	color: #666;
+	margin-top:10px;
+}

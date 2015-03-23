@@ -1,0 +1,7 @@
+.container .stage .content .destaques .destaques_container .destaque .destaque_content { 
+vertical-align: top!important;
+}
+
+.container .stage .content .destaques .destaques_container .destaque .imagem {
+	float: none!important;
+}

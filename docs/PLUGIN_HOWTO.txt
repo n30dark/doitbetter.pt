@@ -1,0 +1,208 @@
+PASTAS
+---------
+
+Para criar um novo plugin deve ser criada uma pasta em "plugins/site". O nome da pasta deverá ser o nome do plugin.
+
+Vamos tomar como exemplo criar o plugin "home":
+
+1. Criamos a pasta "plugins/site/home";
+2. Criamos as subpastas "imgs", "scripts" e "vistas", para imagens, scripts e vistas, respectivamente;
+3. Criamos o ficheiro "home.php" em "plugins/site/home".
+
+O FICHEIRO HOME.PHP
+---------
+
+O ficheiro "home.php" irá ter as funções a ser usadas no dispatch de um plugin.
+A classe criada deverá ser a seguinte:
+
+	class home_plugin extends Plugin{
+	
+	}
+
+A FUNÇÃO INDEX (STAGE)
+---------
+
+Vamos criar uma função que obtém o stage, ou seja, o ambiente geral do site.
+A função será como segue:
+
+	function index($parametros){
+	/**
+	 * a variável parâmetros corresponde aos 
+	 * parâmetros introduzidos na querystring 
+	 * após o nome da funcao do plugin
+	 **/
+		$variaveis = &new Buffer();
+		
+	//definir CSS de acordo com o browser utilizado
+		$browser = BO_BROWSER::obter_browser();
+		
+		$this->template->adicionarCSS('estilos/960.css');
+		switch($browser){
+			
+			case "Firefox":
+				$this->template->adicionarCSS('estilos/ff.site.css');
+				break;
+			case "IE":
+				$this->template->adicionarCSS('estilos/ie.site.css');
+				break;
+			case "Opera":
+				$this->template->adicionarCSS('estilos/opera.site.css');
+				break;
+			case "Chrome":
+				$this->template->adicionarCSS('estilos/chrome.site.css');
+				break;
+			case "Safari":
+				$this->template->adicionarCSS('estilos/safari.site.css');
+				break;
+			default:
+				$this->template->adicionarCSS('estilos/ff.site.css');
+				break;
+		}
+	//fim da verificação de browser
+		
+	//activar o xcss. NECESSÁRIO
+		$this->template->adicionarJS('estilos/xcss');
+		
+	//adicionar javascript ao header. repetir para todos os javascripts
+		$this->template->adicionarJS("caminho/do/javascript.js");
+		
+	//adicionar um novo css
+		$this->template->adicionarCSS("caminho/do/ficheiro.css");
+		
+	//verificar e definir lingua através dos parâmetros
+		if(!isset($parametros[0])){
+			$ling = $this->Conf['Site']['Lingua'];
+		}else{
+			$ling = $parametros[0];
+		}
+		$lingua = &new Lingua($ling);
+		$lingua = $lingua->carregar();
+	//fim da definição de lingua
+	
+	//obter dados da base de dados
+		$bd = &new BaseDados();
+		$dados = $bd->obterArrayObjectos("QUERY MYSQL");
+		//poderá ser utilizada qualquer função da classe BaseDados para obter dados.
+	//fim da obtenção de dados
+	
+	//introduzir variáveis no buffer
+		$variaveis->adicionar("variavel", $variavel);
+		//fazer o mesmo para cada variável que será enviada para a vista
+	//fim da introdução das variáveis
+	
+	//criar uma nova vista
+		$vista = &new Vista("vista_stage");
+		//"vista_stage" é neste caso o nome do ficheiro da vista a utilizar
+		$vista->caminhoBase = $this->caminhoBase . '/vistas';
+		$vista->variaveis = $variaveis->toArray();
+	//fim da criação da vista		
+	
+	//executar a vista
+		$this->template->adicionarVista($vista, 'stage');
+	}  
+	
+A FUNÇÃO BLOCO
+---------
+
+Vamos criar uma função bloco, que obtém um bloco, um pouco como um widget.
+
+Os blocos são obtidos dentro de um ficheiro de vista com o gestor de plugins.
+O gestor de plugins deverá ser configurado da seguinte forma:
+
+	$plug = &new GestorPlugins();
+	$plug->controlador = 'site';
+	
+O bloco é depois invocado na área do código html onde este se encontrará com:
+
+	$plug->dispatch(Array('plugin', 'bloco'));
+	/**
+	 * plugin corresponde ao nome do plugin e bloco ao nome da função de bloco. 
+	 * e.g.: $plug->dispatch(Array('conteudo', 'about'));
+	 **/
+
+A função será como segue:
+
+	function bloco($parametros){
+	/**
+	 * a variável parâmetros corresponde aos 
+	 * parâmetros introduzidos na querystring 
+	 * após o nome da funcao do plugin.
+	 *
+	 * O nome da função será aquela que define 
+	 * o bloco (e.g.: login, carros, emocoes, registar)
+	 **/
+		$variaveis = &new Buffer();
+	
+	/**
+	 * Os ficheiros de CSS e JS deverão ser carregados 
+	 * todos nos ficheiros de stage.
+	 **/
+	 
+	 //verificar e definir lingua através dos parâmetros
+	 	$QS = &new QueryString();
+		if(!isset($QS->Segmentos[0])){
+			$ling = $this->Conf['Site']['Lingua'];
+		}else{
+			$ling = $QS->Segmentos[0];
+		}
+		$lingua = &new Lingua($ling);
+		$lingua = $lingua->carregar();
+	//fim da definição de lingua
+	
+	//obter dados da base de dados
+		$bd = &new BaseDados();
+		$dados = $bd->obterArrayObjectos("QUERY MYSQL");
+		/**
+		 * poderá ser utilizada qualquer função da classe 
+		 * BaseDados para obter dados.
+		 **/
+	//fim da obtenção de dados
+	
+	//introduzir variáveis no buffer
+		$variaveis->adicionar("variavel", $variavel);
+		//fazer o mesmo para cada variável que será enviada para a vista
+	//fim da introdução das variáveis
+	
+	//criar uma nova vista
+		$vista = &new Vista("vista_stage");
+		//"vista_stage" é neste caso o nome do ficheiro da vista a utilizar
+		$vista->caminhoBase = $this->caminhoBase . '/vistas';
+		$vista->variaveis = $variaveis->toArray();
+	//fim da criação da vista
+	
+	//criar e executar um novo bloco
+		$bloco = "bloco";
+		$this->template->adicionarVista($vista, $bloco);
+		$this->template->mostrarBloco($bloco);
+	//fim da criação do bloco		
+	
+	}
+	
+O FICHEIRO DE VISTA
+---------
+
+O ficheiro de vista encontra-se na pasta "vistas", e corresponde ao html 
+que a função do plugin irá lançar.
+O formato do ficheiro de vista é como segue:
+
+	<?php
+	//obtenção dos dados das variaveis emitidas pela função
+		$conf = $dados['conf'];
+		$lingua = $dados['lingua'];
+		$var = $dados['var'];
+	//fim da obtenção dos dados das variaveis
+	
+	//criação do gestor de plugins, caso este seja necessário
+		$plug = &new GestorPlugins();
+		$plug->controlador = 'site'; 
+	//fim da criação do gestor de plugins
+	?>
+		<div>
+			aqui estará o conteúdo necessário
+		</div>
+		
+FUNÇÕES DA LIB
+---------
+
+Todas as classes e funções da Lib podem ser utilizadas em qualquer um dos pontos
+do desenvolvimento de um plugin, sem necessidade de importar qualquer uma delas.

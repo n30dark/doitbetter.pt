@@ -1,0 +1,118 @@
+.container .stage .content .destaques{
+	margin-top:-10px;
+}
+
+.container .stage .content .destaques .destaques_container .destaque .destaque_content {
+	width: 334px!important;
+	float:left;
+}
+
+.container .stage .content .destaques .destaques_container .destaque .imagem {
+	display:inline-block!important;
+	vertical-align: top;
+	float:left!important;
+}
+
+.container .stage .content .ultimas_noticias {
+	float:left!important;
+	width: 760px;
+	margin-left:-5px;
+}
+.container .stage .content .ultimos_projectos {
+	float:right!important;
+	margin-right:20px;
+}
+.container .stage .content .ultimos_projectos .projecto {
+	margin-left: 5px;
+}
+
+.container .footer .social_by .by {
+	margin-top:50px!important;
+}
+
+.container .stage .content .right {
+	float:none!important;
+	margin-right:20px; 
+	margin-left:490px!important;
+	position:absolute;
+	top:142px;
+}
+
+.container .stage .content .destaques .next{
+	margin-left: 930px!important;
+	margin-top:-160px!important;
+}
+
+.container .stage .top .top_right .menu{
+	width: 400px;
+	margin-left:100px;
+	margin-top:-100px;
+}
+
+.container .stage .top .top_right .menu ul li{
+	padding-right:3px;
+    padding-left: 3px;
+}
+
+.container .stage .top .top_right .social{
+	width: 650px;
+}
+
+.container .stage .top{
+	margin-bottom: 0px;
+	width: 800px;
+	height:101px;
+}
+
+.container .stage .top .logo{
+	margin-top:20px;
+	width:70px;
+	float:left;
+	height:112px;
+	margin-left:20px;
+}
+
+.container .stage .top .top_right{
+	margin-top:20px;
+	width:400px;
+	display:inline-table;
+	float:left;
+	height:100px;
+}
+
+
+
+.container .stage .content .breadcrumbs{
+	width: 960px;
+}
+
+.container .stage .content .newsletter{
+	margin-left:-20px;
+}
+
+.container .stage .content .photo_gallery{
+	float:left;
+	width: 452
+}
+
+.container .stage .content .latest_tweets{
+	float:left;
+}
+
+.container .stage .content .destaques .destaques_container{
+	width:730px;
+}	
+
+.container .stage{
+	margin-top:0px;
+}
+
+body{
+	margin-top:0px;
+}
+
+.list_projectos{
+	width:480px!important;
+	margin-left:20px!important;
+}
+

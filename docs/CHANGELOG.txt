@@ -1,0 +1,60 @@
+1. Copyright e Disclaimer
+---------------------------
+Esta aplicação é software opensource, produzida por Sérgio Paulino
+para a 3.Scape. Por favor veja o código fonte.
+
+2. Changelog
+------------
+Este é um changelog não-exaustivo (mas quase completo) para o Scap3 BO 1.0,
+incluindo as versões Beta Release e Release Candidate.
+
+Legenda:
+
+* -> Correcção de Segurança
+# -> Correcção de Bug
+$ -> Correcção de Língua ou Mudança
++ -> Adição
+^ -> Alteração
+- -> Removido
+! -> Nota
+
+-------------------- 1.0.2 Beta Release 2 [22-Janeiro-2010] ------------------
+
+19-Janeiro-2010 Sérgio Paulino
+
+# Corrigido bug na classe QUERYSTRING que lançava os segmentos incorrectos
+# Corrigido o bug da selecção da imagem para efectuar o crop
++ Adicionada a funcionalidade de "Introduzir novo", nas dropdowns
++ Adicionada a área de Ficheiros, incorporando uma FileTree
+
+18-Janeiro-2010 Sérgio Paulino
+
+* Alteradas as funções deprecated do PHP para funções actualizadas 
+# Corrigido o bug de distância de parágrafos na classe fonts, relativamente a caracteres below-line
++ Adicionada a variável hover a FONTS::escrever(), permitindo assim a existência de hover-change no texto criado
+
+
+-------------------- 1.0.1 Beta Release 1 [15-Janeiro-2010] ------------------
+
+14-Janeiro-2010 Sérgio Paulino
+
++ Adicionada a funcionalidade de crop no upload de imagens
+
+13-Janeiro-2010 Sérgio Paulino
+
++ Criado um ficheiro de ajuda para a construção de plugins ("docs/PLUGIN_HOWTO.txt")
++ Criado um ficheiro de ajuda para a criação do ficheiro de configuração ("docs/CONFIG_HOWTO.txt")
+# Corrigido o upload de imagens
+# Corrigido a alteração de dados de um objecto
+
+12-Janeiro-2010 Sérgio Paulino
+
+^ Removidas as classes internas do ficheiro utilitários 
++ Criado o ficheiro bo_browser
++ Criado o ficheiro bo_data
++ Criado o ficheiro bo_javascript
++ Criado o ficheiro bo_pagetitle
++ Criado o ficheiro bo_paginador
++ Criado o ficheiro bo_texto
+^ Comentados todas as classes da Lib
+^ Alteração da função "escrever" na classe FONTS de forma a executar o trim da imagem

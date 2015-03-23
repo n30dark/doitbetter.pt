@@ -1,0 +1,3 @@
+$(function($) {
+    $('.hora').jclock();
+});

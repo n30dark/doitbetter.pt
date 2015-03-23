@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : faq.xml
+    Created on : 5 de Abril de 2010, 14:19
+    Author     : Sérgio
+    Description:
+        Documento de ajuda FAQ.
+-->
+
+<root>
+
+    <faq category="GERAL">
+        <title>Ajuda1</title>
+        <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat tincidunt lorem, sed hendrerit augue congue sed. Duis euismod, enim nec tempor suscipit, lorem risus malesuada augue, eu gravida turpis dui sit amet velit. Phasellus id lacus sed lacus molestie condimentum. Donec sodales turpis quis lectus vulputate eget egestas elit vehicula. Aenean id libero ipsum. Quisque in bibendum nunc. Praesent enim magna, ornare feugiat sollicitudin sed, interdum vel tortor. Vestibulum convallis nibh non elit malesuada in placerat odio sodales. Aliquam erat volutpat. Sed eros metus, convallis nec ullamcorper et, tincidunt quis risus. Morbi luctus nisi vitae tortor eleifend ut lacinia magna laoreet. In turpis nibh, lacinia et vehicula et, aliquet a dui. Etiam sit amet dolor risus, a euismod sem. Nullam condimentum egestas odio id vulputate. Nulla aliquet neque ac odio sagittis eget luctus elit varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras sed congue felis. Morbi nulla nunc, volutpat ut rutrum vitae, consequat sed libero. Quisque blandit magna ac ante cursus non placerat nulla lacinia. </text>
+    </faq>
+
+    <faq category="GERAL">
+        <title>Ajuda2</title>
+        <text> Morbi nulla nunc, volutpat ut rutrum vitae, consequat sed libero. Quisque blandit magna ac ante cursus non placerat nulla lacinia. </text>
+    </faq>
+
+</root>

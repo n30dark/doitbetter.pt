@@ -1,0 +1,29 @@
+table.n,	/* ganze Tabelle */
+span.n,		/* darstellbares Zeichen */
+span.h,		/* kompl. darst. Zeichen: Hex */
+span.ns,	/* nicht darst. Zeichen */
+span.hs,	/* kompl. nicht darst. Zeichen: Hex */
+span.nh,	/* darstellbares Zeichen erzw. Hoover */
+span.hh,	/* kompl darst Hex erzw. Hoover */
+span.nsh,	/* nicht darst. Zeichen erzw. Hoover */
+span.hsh	/* kompl. nicht darst. Hex erzw. Hoover */
+	{	font-family: "Courier New", Courier, mono; font-size: 14px; line-height: 16px;	}
+span.n input, span.h input,	span.ns input, span.hs input, span.nh input, span.hh input, span.nsh input, span.hsh input
+	{	border: 0px solid #cccccc; color: #CC0000; /*width:8px;*/ height: 15px; font-family: "Courier New", Courier, mono; font-size:14px; padding:0px; margin:0px;}
+span.h,	span.hs, span.hh, span.hsh	
+	{	padding-left: 4px; padding-right: 4px;}
+span.ns, span.hs
+	{	color:#999;	}
+span.n:hover, span.ns:hover, span.nh, span.nsh,
+span.h:hover, span.hs:hover, span.hh, span.hsh
+	{	background-color: #CCCCCC;	}
+table.n
+	{ position: absolute; top: 0px; left: -1px; margin:0px; padding: 0px; }
+table.n tr th
+	{	border-left: 1px solid #fcfcfe; border-right: 1px solid #919b9c; border-bottom: 1px solid #919b9c; height: 14px; color: #039; }
+table.n tr td
+	{	border-left: 1px solid #fcfcfe; border-right: 1px solid #919b9c; border-bottom: 1px solid #919b9c; overflow:hidden; white-space:nowrap; color: #06c;}
+table.n a
+	{	text-decoration: none; border: 1px solid #919b9c; color: #039;	}
+table.n a:hover
+	{	background-color:#999999;	}

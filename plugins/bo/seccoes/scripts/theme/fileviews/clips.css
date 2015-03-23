@@ -1,0 +1,14 @@
+/* CSS Document */
+div#fileviews_clip div
+	{	margin: 10px; text-align: center; overflow: hidden; display: block; float: left; }
+div#fileviews_clip div img
+	{	background-position: center; background-repeat:no-repeat;  border: 1px solid #CCF; margin:0; padding:0; }
+div#fileviews_clip div label
+	{	padding: 0 4px 0 4px; font-size: 10px; font-family: Arial, Helvetica, sans-serif;
+		overflow: hidden; margin: 0; white-space: nowrap;	}
+div#fileviews_clip div.marked
+	{	background-color: transparent; }
+div#fileviews_clip div.marked img
+	{	border-color: #06f; 	}
+div#fileviews_clip div.marked label
+	{	background-color: #06F; color: #fff;	}

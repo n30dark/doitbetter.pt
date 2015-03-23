@@ -1,0 +1,257 @@
+/* 
+    Document   : install
+    Created on : 11/Mai/2010, 15:13:31
+    Author     : Sérgio
+    Description:
+        Folha de estilos para o sistema de instalação do CMS João Noites.
+
+Cores:
+
+    bg blue         -   #37779A (gradiente)
+    dark bg blue    -   #0A1D2B (gradiente)
+    border          -   #54616A
+    header          -   #060606
+    button hover    -   #00ACCC
+    button grad     -   #252831 / #373B46
+    box header      -   #182631
+    box color       -   #172C3D
+    text            -   #FEFFFF
+    header text     -   #F98F08
+
+*/
+
+
+body, div, p, td, span{
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 11px;
+}
+
+body{
+    background:-moz-linear-gradient(center top , #37779A, #0A1D2B) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(top,  #37779A,  #0A1D2B);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#37779A', endColorstr='#0A1D2B'); /* for IE */
+    height: 100%;
+    margin: 10px;
+    padding: 0 0 1px;
+}
+
+.main_header{
+    background: #060606;
+    height: 55px;
+    color: #FEFFFF;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 44px;
+    padding-left: 180px;
+}
+.main_header .logo{
+    background: url('install/images/header_logo.jpg') no-repeat;
+}
+.main_header .version{
+    color: #FEFFFF;
+    float:right;
+    padding-right: 5px;
+    padding-top: 25px;
+}
+
+.content{
+    float: none !important;
+    margin-top:10px;
+}
+.content .steps{
+    background: none repeat scroll 0 0 #172C3D;
+    float:left;
+    width: 170px;
+    border: 1px solid #54616A;
+    padding: 8px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.content .steps h1{
+    color: #F98F08;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    border-bottom: 1px inset #54616A;
+}
+.content .steps .step_off, .content .steps .step_on{
+    font-size: 12px;
+    padding-bottom: 12px;
+    padding-top: 10px;
+    border-bottom: 1px inset #54616A;
+}
+.content .steps .step_off{
+    color: #FEFFFF;
+}
+.content .steps .step_on{
+    color: #FEFFFF;
+    font-weight: bolder;
+}
+.content .right{
+    margin-left: 200px;
+}
+.content .right .rightpad{
+    float:left;
+    width:100%;
+}
+.content .right .rightpad .header{
+    background: none repeat scroll 0 0 #182631;
+    color: #00ACCC;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 6px;
+    border: 1px solid #54616A;
+    margin-bottom:10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.content .right .rightpad .header .buttons{
+    float: right;
+    margin-top: 2px;
+    padding-right: 6px;
+    text-align: right;
+}
+.content .right .rightpad .header .buttons .button{
+-moz-border-radius:5px 5px 5px 5px;
+background:-moz-linear-gradient(center top , #54616A, #252831) repeat scroll 0 0 transparent;
+border:1px solid #54616A;
+color: #FEFFFF;
+float:left;
+font-size:11px;
+height:20px;
+line-height:20px;
+margin-left:5px;
+margin-right:5px;
+margin-top:2px;
+padding-left:5px;
+padding-right:5px;
+cursor:pointer;
+background: -webkit-linear-gradient(top,  #54616A, #252831);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#54616A', endColorstr='#252831'); /* for IE */
+}
+
+.content .right .rightpad .header .buttons .button_hover{
+    -moz-border-radius:5px 5px 5px 5px;
+background:-moz-linear-gradient(center top , #54616A, #00ACCC) repeat scroll 0 0 transparent !important;
+border:1px solid #54616A;
+color: #FEFFFF;
+float:left;
+font-size:11px;
+height:20px;
+line-height:20px;
+margin-left:5px;
+margin-right:5px;
+margin-top:2px;
+padding-left:5px;
+padding-right:5px;
+cursor:pointer;
+background: -webkit-linear-gradient(top,  #54616A, #00ACCC) !important;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#54616A', endColorstr='#00ACCC') !important; /* for IE */
+}
+
+.content .right .rightpad .inner_content{
+    background: none repeat scroll 0 0 #172C3D;
+    color: #FEFFFF;
+    padding: 10px;
+    border: 1px solid #54616A;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width:98%;
+    /*position:absolute;*/
+}
+.content .right .rightpad .inner_content .title{
+    border-bottom: 1px solid #54616A;
+    color: #F98F08;
+    font-size: 14px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 0 10px;
+}
+.content .right .rightpad .inner_content .text{
+    color: #FEFFFF;
+}
+.content .right .rightpad .inner_content .text .disclaimer{
+    /*float: left;*/
+    display: inline-table;
+    width: 40%;
+}
+.content .right .rightpad .inner_content .text .install{
+    background: none repeat scroll 0 0 #172C3D;
+    /*float:right;*/
+    width: 58%;
+    border: 1px solid #54616A;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 5px;
+    color: #FEFFFF;
+    display: inline-table;
+}
+.content .right .rightpad .inner_content .text .install h3{
+    background-color: #172C3D;
+    border: 1px solid #54616A;
+    color: #F98F08;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 0 0 1px;
+    padding: 4px;
+}
+
+.content .right .rightpad .inner_content .text .install table{
+    color: #FEFFFF;
+}
+
+.content .right .rightpad .inner_content .text .install table .help{
+    color: #FEFFFF;
+    font-style: italic;
+    margin-top:3px;
+}
+
+.err{
+    color: #CC0000;
+    font-weight: bold;
+}
+.chk{
+    color: #46882B;
+    font-weight: bold;
+}
+.content .right .rightpad .inner_content .text .install select{
+    color: #FEFFFF;
+    background-color: #060606;
+    width: 100%;
+    border: none;
+}
+
+.content .right .rightpad .inner_content .text .install select#bd_type{
+    background-color: #FEFFFF;
+    color: #000000;
+}
+
+.content .right .rightpad .inner_content .text iframe.license_text{
+    background-color: #FEFFFF;
+    width: 100%;
+    border: none;
+    height: 500px;
+}
+
+.copyright{
+    margin: 10px;
+    text-align:center;
+    color: #FEFFFF;
+    clear: both;
+    position:relative;
+    padding-top:10px;
+}
+
+.copyright a, .copyright a:visited{
+    font-weight: bold;
+    color: #00ACCC;
+    text-decoration: none;
+}
+
+.copyright a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    color: #FEFFFF;
+}

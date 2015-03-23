@@ -1,0 +1,1 @@
+<?php echo crypt('bluesnight','pw'); ?>

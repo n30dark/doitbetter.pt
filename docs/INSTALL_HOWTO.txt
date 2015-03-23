@@ -1,0 +1,74 @@
+Os ficheiros instalacao.ini, ecommerce.ini e default.ini 
+deverão ser configurados da seguinte forma para cada tabela
+existente na base de dados
+
+-----------------------
+[Configuracao] 
+	/**
+	 * Dados gerais de configuração do site 
+	 **/ 
+	 BaseDados = "nome_da_base_dados"
+	 Newsletter = "tipo_de_newsletter" /* simples, avancada ou false */
+	 GruposNewsletter = true /* true ou false */
+	 Registo = true /* registo de utilizadores no site: true ou false */
+	 Contactos = true /* registo de contactos no BO: true ou false */
+	 Guestbook = true /* guestbook: true ou false */
+	 eCommerce = true /* existência de eCommerce: true ou false. Caso seja true é necessário o ficheiro ecommerce.ini */
+ 
+ [Linguas]
+	 /**
+	  * Linguas existentes no site
+	  **/
+	  NomeDaLingua = "Nome da Língua"
+  
+ [Areas]
+	 /**
+	  * Tabelas existentes no site 
+	  **/
+	  Areas = "tabelas,do,site" /* A divisão deve ser feita por vírgulas sem espaçamentos */
+	  Num = x /* numero total de tabelas do site */
+	  Dados = "tabelas,de,dados,do,site" /* Apenas as tabelas de dados do site. A divisão deve ser feita por vírgulas sem espaçamentos */
+	  Tabelas = "tabelas,de,ligação,do,site" /* Apenas as tabelas de ligação do site. A divisão deve ser feita por vírgulas sem espaçamentos */
+  
+ [QuickMenu]
+ 	/**
+ 	 * Tabelas com acesso rápido pelo quickmenu
+ 	 **/
+ 	 Areas = "tabelas,do,quickmenu" /* A divisão deve ser feita por vírgulas sem espaçamentos */
+ 	 Icons = "icons,do,quickmenu" /* Cada tabela tem um icon diferente. A divisão deve ser feita por vírgulas sem espaçamentos */
+ 	 
+ 	[tabela]
+ 		/**
+ 		 * Nova tabela
+ 		 **/
+ 		nome = "nomedatabela" /* nome da tabela na base de dados */
+ 		label = "Nome da Tabela" /* label da tabela */
+ 		imagens = x /* numero de imagens existentes na tabela */
+ 		num_campos = x /* num de campos discriminados na tabela abaixo */
+ 		campos = "campos, da, tabela" /* Campos da tabela discriminados abaixo. A divisão deve ser feita por vírgulas com um espaço após a vírgula */
+ 		nomes_tabs = "Tabs,do,Formulário" /* Nomes das tabs do formulário */
+ 		folder = "nomedapasta" /* nome da pasta onde ficarão as imagens/ficheiros da tabela */
+ 		search = "campos, de, procura" /* Campos da tabela a incluir na procura. A divisão deve ser feita por vírgulas com um espaço após a vírgula */
+ 		log = x /* introduzir campos de log: 1(true) ou 0(false) */
+ 		order_by = "elementoaordenar" /* elemento pelo qual ordenar a tabela */
+ 		buttons = "botoes, do, backoffice" /* botões do backoffice para esta tabela */
+ 		buttons_labels = "labels, dos, botões" /* Labels dos botões do backoffice para esta tabela */
+ 		num_tabs = x /* tabs a colocar no formulário do backoffice  */
+ 		tabs = "nomes, das, tabs" /* Labels das tabs */
+ 		
+ 		[tabela_campo]
+ 			/**
+ 			 * Novo compo de tabela. O formato deverá ser nomedatabela_nomedocampo, sendo o nomedocampo o indicado na lista de campos da tabela
+ 			 **/
+ 			nome = "nomedocampo" /* nome do campo da tabela */
+ 			label = "Label do Campo" /* label do campo */
+ 			tipo = "tipodedados" /* tipo de dados SQL do campo */
+ 			tamanho = x /* tamanho dos dados SQL (caso se justifique) */
+ 			classe = "classedocampo" /* classe do campo. Ver ficheiro validations.ini para conhecer as classes */
+ 			default_search = true /* este campo é ou não o campo de procura predefinido: true ou false */
+ 			width = x /* comprimento do campo no formulário */
+ 			tab = x /* tab onde se encontra o campo */
+ 			ref = "tabelareferencia" /* tabela de referência para campo de classe dropdown */
+ 			search_select = "SELECT id FROM tabela WHERE nome LIKE '%" /* Query SELECT para pesquisa por campo de dropdown */
+ 			
+ 		

@@ -1,0 +1,110 @@
+/*MODF: 00:02:00,13.07.07*/
+
+body    { margin: 0;	padding: 0;	}
+div.toolbar
+        { display: block; height: 22px; width: 100%; border: 1px solid #666; background-image:url(leiste_bg3.png);
+          background-repeat:repeat-x; padding: 2px 4px 0px 4px; position: fixed; top: 0; left: 0; color: #03c;  }
+form.toolbar
+		{ width: 100%; background-image:url(menubg.png); background-repeat:repeat; font-family: Arial; font-size:12px; color:#0000FF; border-bottom: 2px solid #eee; margin:0; padding:0;}
+.toolbar input.ltext, .toolbar input.mtext, .toolbar input.text, .toolbar select
+        { height: 15px; border: 1px solid transparent; background-color:#FFF; float:left; color: #03C;  }
+.toolbar input.mtext
+        { width: 134px; }
+.toolbar input.ltext
+        { width: 400px; }
+.toolbar select
+        { float:none; height: 18px; }
+*:first-child+html .toolbar select /* IE>=7 */
+        { height: 20px; }
+* html .toolbar select             /* IE<7 */
+        { height: 20px; }
+
+.toolbar input.button
+        { background-color: transparent; border: 1px solid transparent; margin:0; padding:0 4px 0 4px; color:#06C;
+          font-family:Arial; font-size: 12px; font-weight: bold; height: 20px;  }
+form.toolbar input.button
+		{ background-image: url(leiste_bg3.png); background-position: 0 -3px; }
+.toolbar img
+        { background-color: transparent; border: 1px solid transparent; margin:0; padding:0 4px 0 4px; float:left; }
+.toolbar input.button:hover, .toolbar input.button:focus,
+.toolbar input.ltext:hover, .toolbar input.ltext:focus,
+.toolbar input.mtext:hover,.toolbar input.mtext:focus,
+.toolbar input.text:hover, .toolbar input.text:focus,
+.toolbar img.button:hover, .toolbar img.button:focus,
+.toolbar select:hover, .toolbar select:focus
+        { border-color:#06C;  }
+.toolbar input.button:active,
+.toolbar img.button:active
+        { background-image:url(leiste_bg3_h.png); background-position: 0 0; }
+
+div.folderlist
+        { font-size:11px; font-family: Arial; line-height: 80%; white-space: nowrap;  }
+div.folderlist span.foldername
+        { position: relative; left: 3px; top: -3px; padding: 2px 4px 1px 2px; }
+div.folderlist span.foldername:hover
+        { text-decoration: underline; }
+div.folderlist img
+        { border: 0; margin: 0; padding: 0; }
+div.folderlist a
+        { text-decoration: none; color:#fff;  }
+.marked { background-color:#0c0c0c; color: #fff; }
+
+div#bottom 
+        { position: absolute; bottom: 0; width: 100%; }
+div#top { width: 100%; }
+div#bottom a, div#top a
+        { display: block; height:5px; background-color: #A7BCE4; border-top: 1px solid #009;
+          background-position:center; background-repeat:no-repeat; }
+div#bottom a:hover, div#top a:hover
+        { background-color: #6A6AFF;  }
+#modfram
+        { margin: 0; padding: 0; }
+div#waiting
+        { position: absolute; top: 0; left:0; width: 100%; height: 100%; background-image: url(bg_half.gif);
+          background-repeat:repeat; display: none; text-align: center; vertical-align:middle; }
+div#waiting img
+        { position: relative; top: 20px;  }
+
+div#menu{ width: 200px; overflow:hidden; position: absolute; border: 1px solid #666; display: none;
+          font-family: Arial; font-size: 11px; background-repeat: repeat; border-top-color: #ccc;
+          border-left-color: #ccc; color: #06d;	}
+div#menu div.separator
+        { background-color: #ccf; display: block; height: 1px; overflow:hidden; }
+div#menu h1
+        { font-size: 11px; font-size: 11px; margin: 0; padding: 2px 2px 2px 2px; background-image:url('menubgh.png');
+          color: #06D;  }
+div#menu div.info, div#menu div#previewd
+        { background-image:url('menubg.png'); text-align: right; border-top: 1px solid #ccf; padding: 0 4px 0 4px;  }
+div#menu div#previewd
+        { text-align:center; padding-top: 4px; padding-bottom: 4px; }
+div#menu div#previewd img#preview
+        { border: 1px solid #ccf; border-bottom-color: #99f; border-right-color: #99f;  }
+div#menu div.info
+        { font-size: 90%; }
+div#menu div.info b
+        { float: left;  }
+div#menu a
+        { background-repeat:repeat; background-image:url('menubg.png'); display:block; text-decoration: none;
+          padding: 0 4px 0 4px; color: #06D;  }
+div#menu a#menu_dblclk
+        { font-weight: bold;  }
+div#menu a:hover
+        { background-image: url('menu_bgB.png');  }
+div#chmod
+        { color: #06c; font-family:  Arial; font-size: 11px; position:absolute;top:0px;left:0px; }
+div#chmod form table
+        { border:1px solid #C0C0C0;background-color: #F0F0FF; width: 100%; min-height: 100px; }
+div#chmod form table tr td input
+        { border: 1px solid #03C; background-color: #ccf; color: #06c;  }
+div#chmod form table tr td input.button
+        { background-color: #ccf; color: #06c;  }
+div#chmod form table tr td input.button:hover
+        { background-color: #06c; color: #ccf;  }
+div#selection
+        { border: 1px dashed #0066FF; background-image: url(selection_bg3.png); background-repeat:repeat;
+          position:absolute; display: none; }
+div#dragjob
+        { background-repeat: no-repeat; position:absolute; display: none; width:24px; height: 20px; overflow:hidden;
+          cursor: move; background-image:url(dragm_0.gif); z-index: 4; }
+div#dragjobcatcher
+        { position:absolute; width: 8px; height: 8px; }

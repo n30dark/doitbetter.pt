@@ -1,0 +1,32 @@
+REQUISITOS
+-------
+
+Apache -> http://www.apache.org
+MySQL -> http://www.mysql.com
+PHP -> http://www.php.net
+
+
+CONFIGURAÇÃO DE SERVIDOR
+-------
+
+Deve garantir que o PHP foi compilado com suporte para MySQL e Zlib de forma a correr com sucesso o BO.
+Será necessário ainda mod_rewrite e o uso de ficheiros .htaccess locais.
+
+
+INSTALAÇÃO
+-------
+
+1. Colocar os ficheiros no servidor web.
+2. Alterar o ficheiro "config/configuracao.php" com os dados de configuração do seu site (Ver o ficheiro CONFIG_HOWTO.TXT para mais infos)
+3. Alterar o ficheiro "config/instalacao.ini" com as bases de dados do seu site (Ver o ficheiro INSTALL_HOWTO.TXT para mais infos)
+4. Alterar o ficheiro "config/ecommerce.ini" com as bases de dados da sua loja online, caso exista (Ver o ficheiro INSTALL_HOWTO.TXT para mais infos) 
+5. Executar o instalador automático em http://o-seu-site/install
+6. Configurar o seu site através do BO (após instalação é automaticamente redireccionado para lá) em http://o-seu-site/bo
+7. Utilizar o site em http://o-seu-site/
+
+BO
+-------
+
+Após instalação o seu website estará configurado sem quaisquer dados e apenas um utilizador de administração.
+
+Utilize o BO para introduzir novos dados, utilizadores, linguagens, etc.

@@ -1,0 +1,18 @@
+/*MODF: 08:54:00,10.07.07*/
+body  { overflow: hidden; font-family: Arial; }
+table#editframe
+      { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+td#edittext, td#linenumbers
+      { vertical-align:top;  }
+td#edittext
+      { border: 1px solid blue; background-image: url(../selection_bg3.png); }
+td#linenumbers
+      { background-color: #AAF; text-align: right; padding-right:2px; padding-top: 4px; }
+textarea#edittextarea
+      { width: 100%; height: 100%; min-height: 99%; font-size: 16px; white-space: nowrap; overflow: scroll; }
+div#progressbar
+      { display: block; width: 100px; height: 20px; border: 1px solid #ccf; position: fixed; right: 10px; top:2px; }
+div#progressvalue
+      { display: block; width: 0; background-image: url(../selection_bg.png); }
+div#progresstext
+      { position: fixed; right: 40px; top: 4px; }

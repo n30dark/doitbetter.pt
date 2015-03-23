@@ -1,0 +1,191 @@
+/* 
+    Document   : cms_login
+    Created on : 28/Jun/2010, 16:29:50
+    Author     : Sérgio
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+body{
+    background: url("cms/bg_login.jpg") no-repeat center center #18243E fixed !important;
+    font-family: "Myriad Pro", Arial, Sans-serif;
+}
+
+div#distance { 
+	margin-bottom: -10em; /* half of content height */
+	background: none;      /* temporary - used to see div */
+	width: 1px;           /* required to "hide" distance div */
+	height: 50%;          /* required */
+	float: left;          /* required */
+
+}
+div.login_page {
+	position: relative;   /* positions content on top of distance */
+	text-align: left;     /* horizontal centering hack for IE */
+	height: 20em;         /* required - desired height */
+	width: 400px;          /* required - desired width */
+	background: none;     /* cosmetic */
+	margin: 0 auto;       /* required */
+	clear: left;          /* required */
+}
+
+div.title{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+div.ver{
+    color: #fff;
+    font-size: 11px;
+    line-height:12px;
+    text-align:right;
+    margin-right:80px;
+}
+div.version_num{
+    background: url('cms/version_num.png');
+    line-height:12px;
+    width:20px!important;
+    display: inline-table;
+    font-size:11px;
+    text-align: center;
+}
+div.new_ver{
+    background: url('cms/new_ver.png');
+    line-height:12px;
+    width:30px!important;
+    display: inline-table;
+    font-size:11px;
+    text-align: center;
+}
+
+div.login_cont{
+    display:table;
+    clear:both;
+    width: 400px;
+}
+
+div.login_logo{
+    background: url('cms/login_logo.png');
+    float:left;
+    width: 42px;
+    height: 205px;
+}
+
+div.login_content{
+    width: 350px;
+    height:205px;
+    float:left;
+    margin-left:2px;
+    font-size: 12px;
+    
+}
+
+div.actualizacoes{
+    background: url('cms/actualizacoes.png');
+    width: 322px;
+    height: 42px;
+    color: #fff;
+    text-align:center;
+    line-height:30px;
+}
+span.warning{
+    color: f2951d;
+}
+
+div.login_form{
+    background: url('cms/login_form.png');
+    width: 302px;
+    height: 136px;
+    padding: 10px;
+}
+
+label{
+    width: 70px;
+    display:inline-table;
+    text-align: right;
+    margin-top:10px;
+    font-weight: bolder;
+    margin-right: 50px;
+}
+
+input.campos{
+    background: #f5f5f5;
+    opacity: 0.6;
+    filter: opacity(60);
+    border: 1px solid #ccc;
+    height: 20px;
+    width: 150px;
+}
+
+input.check{
+    margin-top:10px;
+    margin-left:122px;
+    background:#fff;
+    border: 1px solid #ccc;
+}
+span.check_label{
+    margin-left:5px;
+    font-size: 10px;
+    line-height:20px;
+}
+
+div.buttons{
+    text-align:right;
+    margin-right:30px;
+}
+button#reset_login{
+    background: url('cms/reset_login.png');
+    width: 80px;
+    height:21px;
+    border:none;
+    color: #fff;
+    font-weight:bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 21px;
+    cursor: pointer;
+}
+button#do_login{
+    background: url('cms/do_login.png');
+    width: 80px;
+    height:21px;
+    border:none;
+    color: #fff;
+    font-weight:bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+div.recover{
+    text-align: right;
+    margin-right:30px;
+    margin-top:10px;
+}
+
+a#recover_link{
+    color: #000;
+    text-decoration:none;
+    font-size: 11px;
+}
+
+div.copyright{
+    font-size: 8px;
+    text-align: center;
+    color: #fff;
+}
+
+a#scape_link{
+    color: #F2951D;
+    text-decoration:none;
+}
